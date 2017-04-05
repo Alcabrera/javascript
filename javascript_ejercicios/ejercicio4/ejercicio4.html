@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Ejercicio 4</title>
+	<script defer src="./ejercicio4.js"></script>
+</head>
+<body>
+	<input type="button" value="Haz clic" onclick="alert('Gracias')"/>
+
+	<div onclick="console.log('Has hecho clic')" onmouseover="console.log('Has pasado el ratón por encima')"> Esto es un div interactivo</div>
+
+	<div style="width:200px; height:200px; background-color: green" onmouseover="this.style.backgroundColor='red'"></div>
+
+	<input type="text" onfocus="console.log('He entrado, muhajajaja')" onblur="console.log('He salido, y dudo que vuelva a entrar')" onmouseover="console.log('Pinchame, si tienes huevos!')">
+		<br>
+	<input type="text" value="" onkeyup="console.log(this.value)">
+		<br>
+	<button onclick="window.location.assign('http://www.google.es')">Google</button> 
+		<br>
+	<button onclick="window.location.assign('http://www.facebook.es')">Facebook</button>
+		<br>
+	<button onclick="window.location.assign('http://www.youtube.es')">YouTube</button>
+		<br>
+
+	<input type="button" value="Haz clic" onclick="prueba()"/>
+	<br>
+	<div style="width:200px; height: 200px; background-color: green" onmouseover="resaltar(this)"></div>
+	<br>
+	<input type="button" value="Haz clic" onmouseover="elmeneito(this)" style="position: absolute;" />
+	<br>
+	<button onclick="elbotonescritor(this)" style="position: absolute;" >Soy un Gnomo</button>
+	<br>
+	<button onclick="elbotonescritor(this)" style="position: absolute;" >y en el bosque soy feliz</button>
+	<br>
+	<button onclick="elbotonescritor(this)" style="position: absolute;" >bajo un árbol vivo yo...</button>
+	<br>
+	<br>
+	<img src="img/gatete.jpg" onmouseover="cambioUno(this,1)" onmouseout="cambioUno(this,2)">
+
+	<br>
+
+	<input id="boton" type="button" value="Haz click"/>
+	<br>
+	<br>
+	<button id="botoncillo">Estoy Activo</button>
+		<br>
+	<br>
+			<img src="img/gatete.jpg"  id="foto">
+			<br>
+	<br>
+		<button id="imaginador">Imagen dentro/fuera</button>
+
+		<br>
+	<br><br>
+	<br>
+
+	
+</body>
+</html>

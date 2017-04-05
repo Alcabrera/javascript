@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Propagaciónes de eventos. Bubbling</title>
+	<script defer src= "bubbling.js" type="text/javascript"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<style type="text/css">
+		.modparrafo1 {
+			font-size: 15px;
+			color: #D35400;
+		}
+
+		.modparrafo2 {
+			color: #900C3F;
+			font-size: 18px;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="container">
+	<h5><strong>EJERCICIO 1. </strong>Crear un documento que contenta un div con el id "principal", dentro de él otro div con el id "secundario", y dentro de éste un tercer div con el id "terciario". Dentro de terciario crea un párrafo con el texto: "Ejemplo de burbujeo". Añade eventListeners con el evento click en el párrafo, en todos los div, en document y en window. Todos deben llamar a una misma función, que debe mostrar por consola el texto "Soy un nodo con ID [id] y tipo [nombreDelNodo] y estoy burbujeando".</h5>
+
+	<div id="principal">
+		<div id="secundario">
+			<div id="terciario">
+				<p id="parrafo">Ejemplo de burbujeo</p>
+			</div>
+		</div>
+	</div>
+
+	<a href="http://www.google.com" onclick="return confirm('La página actual se va a redireccionar. ¿Está seguro?')">Ir a Google</a>
+
+	<div id="textoDiv">ESTO ES UN TEXTO PARA RESALTAR</div>
+
+	<h5><strong>EJERCICIO 2. </strong>Crea un div, y dentro de él añade tres botones. Añade al div un manejador de eventos que se dispare cuando el ratón haga click sobre el elemento. El manejador debe llamar una función que debe mostrar el target y el currentTarget por consola. Prueba el código haciendo click sobre los botones (línea 22 del bubbling.js)</h5>
+
+		<div id="contenedor">
+			<button id="btn1">Botón 1</button>
+			<button id="btn2">Botón 2</button>
+			<button id="btn3">Botón 3</button>
+		</div>
+
+	<h5><strong>EJERCICIO 3. </strong>Crea una tabla con tres campos: fruta, temporada y acciones. Añade a la tabla cinco filas con el nombre de una fruta y la temporada(verano, invierno...), y en último lugar un botón con el texto "borrar". Cuando se haga click sobre el botón borrar de una de las filas, se debe pedir confirmación. Si la respuesta es afirmativa se borrará la fila. En caso contrario se dejará como está (línea 31 del bubbling.js)</h5>
+
+	<table class="table" id="tablaFrutas">
+		<thead>
+			<tr>
+				<th>FRUTA</th>
+				<th>TEMPORADA</th>
+				<th>ACCIONES</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Fresa</td>
+				<td>Verano</td>
+				<td><button type="button" class="btn btn-danger">Borrar</button></td>
+			</tr>
+			<tr>
+				<td>Naranja</td>
+				<td>Invierno</td>
+				<td><button type="button" class="btn btn-danger">Borrar</button></td>
+			</tr>
+			<tr>
+				<td>Melocotón</td>
+				<td>Verano</td>
+				<td><button type="button" class="btn btn-danger">Borrar</button></td>
+			</tr>
+			<tr>
+				<td>Sandía</td>
+				<td>Verano</td>
+				<td><button type="button" class="btn btn-danger">Borrar</button></td>
+			</tr>
+			<tr>
+				<td>Cereza</td>
+				<td>Primavera</td>
+				<td><button type="button" class="btn btn-danger">Borrar</button></td>
+			</tr>
+			
+		</tbody>
+	</table>
+
+	<h5><strong>EJERCICIO 3. </strong>Crea tres párrafos de texto, y dos clases CSS que puedan modificar dicho texto (por ejemplo, cambiando el tamaño, el color o la fuente). Crea una única función de modo que si se hace click sobre uno de los párrafos, se le asigne una de las clases, y si se hace doble click se le asigne la otra (línea 47 del bubbling.js)</h5>
+
+	<p id="parrafo1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	<p id="parrafo2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	<p id="parrafo3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+
+
+	</div>
+
+</body>
+</html>

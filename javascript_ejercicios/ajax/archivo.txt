@@ -1,0 +1,3 @@
+<h1>Carga mediante AJAX correcta</h1>
+<p>AJAX permite hacer llamadas al servidor de forma asincrona</p>
+<p>Este contenido se ha cargado sin necesidad de refrescar la página</p>
